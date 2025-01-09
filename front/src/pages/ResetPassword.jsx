@@ -26,7 +26,7 @@ const ResetPassword = () => {
       const response = await axios.post(`${API_BASE_URL}/reset-password`, formData);
       setMessage(response.data.message);
       setTimeout(() => {
-        navigate('/login');
+        navigate('/');
       }, 2000); // Redirect to login after success
     } catch (err) {
       setError(err.response?.data?.message || 'Reset password failed');
