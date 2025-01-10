@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API_BASE_URL = 'https://task-nodejs-server.vercel.app/api';
+const API_BASE_URL = 'https://nodejstask-servver.vercel.app/api';
 
 const ResetPassword = () => {
   const [formData, setFormData] = useState({

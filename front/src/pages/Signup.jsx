@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
-const API_BASE_URL = 'https://task-nodejs-server.vercel.app/api';
+const API_BASE_URL = 'https://nodejstask-servver.vercel.app/api';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
