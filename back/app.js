@@ -46,21 +46,21 @@ transporter.verify(function(error, success) {
 
 
 const corsOptions = {
-  origin: 'http://localhost:5173', // Allow requests from this origin (frontend URL)
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Allow specific HTTP methods
-  allowedHeaders: ['Content-Type', 'Authorization'], // Allow specific headers
-  credentials: true, // Allow credentials (if needed)
+  origin: 'https://nodejstask-front.vercel.app', 
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], 
+  allowedHeaders: ['Content-Type', 'Authorization'], 
+  credentials: true, 
 };
 
 app.use(cors(corsOptions)); // Apply the CORS middleware
 
-// Explicitly add Access-Control-Allow-Origin header
+
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:5173'); // Set your frontend URL
+  res.header('Access-Control-Allow-Origin', 'https://nodejstask-front.vercel.app'); 
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if (req.method === 'OPTIONS') {
-    return res.sendStatus(200); // Respond to preflight requests
+    return res.sendStatus(200); 
   }
   next();
 });
